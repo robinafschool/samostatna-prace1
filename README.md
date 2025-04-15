@@ -1,18 +1,20 @@
-# Responsive Web Project
+# Flask Photo Gallery
 
-A responsive website that demonstrates the use of flexbox and CSS grid for layout.
+A responsive Flask-based website that demonstrates the use of flexbox and CSS grid for layout.
 
 ## Features
 
+- Flask web application
 - Responsive design for mobile, tablet, and desktop
 - Navigation with smooth scrolling
 - Photo gallery using CSS Grid
 - Features section using Flexbox
-- Contact form with simple validation
+- Contact form with server-side processing
 
 ## Technologies Used
 
-- HTML5
+- Python/Flask
+- HTML5/Jinja2 Templates
 - CSS3 (Flexbox, Grid, Media Queries)
 - JavaScript
 
@@ -20,13 +22,16 @@ A responsive website that demonstrates the use of flexbox and CSS grid for layou
 
 ```
 /
-├── index.html
-├── src/
+├── app.py                 # Flask application
+├── requirements.txt       # Python dependencies
+├── static/                # Static assets
 │   ├── css/
 │   │   └── styles.css
 │   ├── js/
 │   │   └── main.js
-│   └── images/
+│   └── images/            # Image files
+├── templates/             # HTML templates
+│   └── index.html
 └── README.md
 ```
 
@@ -35,16 +40,30 @@ A responsive website that demonstrates the use of flexbox and CSS grid for layou
 ### Local Development
 
 1. Clone this repository
-2. Open `index.html` in your browser
+2. Create a virtual environment (recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the Flask application:
+   ```
+   python app.py
+   ```
+5. Open your browser and navigate to http://127.0.0.1:5000/
 
 ### Deployment to Netlify
 
-1. Push this repository to GitHub
-2. Log in to Netlify (https://www.netlify.com/)
-3. Click "New site from Git"
-4. Choose GitHub and select your repository
-5. Configure build settings (not required for this project)
-6. Click "Deploy site"
+For deploying Flask applications to Netlify, you'll need to use a serverless approach or Netlify Functions.
+Alternatively, you can deploy to a platform that better supports Python web applications like:
+
+- Heroku
+- PythonAnywhere
+- Vercel
+- AWS Elastic Beanstalk
 
 ## GitHub Repository
 
