@@ -68,9 +68,23 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #e9ecef;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 6rem 0;
+    padding: 8rem 0;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Gallery Section - Using CSS Grid */
@@ -86,20 +100,17 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    height: 200px;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
 }
 
-.image-placeholder {
-    height: 200px;
-    background-color: #dee2e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #6c757d;
+.gallery-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* About Section - Using Flexbox */
@@ -118,9 +129,13 @@ nav a:hover {
 }
 
 /* Contact Section */
+.contact h2 {
+    text-align: center;
+}
+
 form {
     max-width: 500px;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
 }
 
 .form-group {
@@ -155,6 +170,8 @@ button {
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
 }
 
 button:hover {
